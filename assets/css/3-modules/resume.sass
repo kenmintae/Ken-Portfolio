@@ -1,0 +1,334 @@
+#resume
+  padding: 50px 0
+  background-color: #f1f8f2
+  display: flex
+  justify-content: center
+
+.about-me
+  display:flex
+  flex-direction:rows
+  justify-content: center
+  //background-color: black
+
+.col-1
+  max-width: 500px
+  margin: 0px 20px
+
+#info
+    max-width: 480px
+    margin: 0px auto
+    padding-right: 200px
+
+    h2
+      text-align: left
+      Color: $kencolor
+      font:
+        size:30px
+        weight:200
+      text-transform: uppercase
+      letter-spacing: 5px
+      padding-bottom: 50px
+    p
+      text-align: left
+      color: #787878
+      font-size: 17px
+      line-height: 30px
+      font-weight: 300
+      padding-top: 50px
+      letter-spacing: 0.5px
+      //padding: 30px 10px
+      //padding-left: 350px
+
+#photo-icon
+    //background-size: cover
+    border-radius: 100%
+    border: 5px solid white
+    width:300px
+    height:300px
+    background: no-repeat center
+    background-size: contain
+    margin: auto auto
+    background-color: white
+    align: center
+
+.bar
+    width: 50px
+    height:2px
+    background-color: #787878
+    opacity: 90%
+#experience
+    background-color: white
+    //position: relative
+    padding: 50px 0px
+
+#timeline
+    position:relative
+    //margin-bottom: 2em
+    //background-color: green
+    //opacity: 0.3
+
+#timeline::before
+    content: ''
+    position:absolute
+    top: 0px
+    left:40px
+    height: 88%
+    width:2px
+    background: #787878
+
+.experience
+    max-width: 500px
+    margin: 0px auto
+    //background-color: pink
+
+    h2
+      text-align: center
+      Color: $kencolor
+      font:
+        size:30px
+        weight:200
+      text-transform: uppercase
+      letter-spacing: 5px
+      padding-bottom: 50px
+
+
+@media only screen and (min-width: 1170px)
+    #timeline
+      //margin-top: 3em
+      padding-bottom: 80px
+      padding-top: 80px
+
+    #timeline::before
+      left:50%
+      margin-left: -2px
+      padding-top: 200px
+
+.timeline-block
+    position: relative
+    margin: 2em 0
+    //padding-left: 12%
+    //padding-right: 12%
+    //background-color: green
+
+.timeline-block::after
+    content:''
+    display: table
+    clear: both
+
+.timeline-block:first-child
+    margin-top: 0
+
+.timeline-block:last-child
+    margin-bottom: 0
+
+@media only screen and (min-width: 800px)
+    .timeline-block
+      margin: 8em 15%
+
+    .timeline-block:first-child
+      margin-top: 20px
+
+    .timeline-block:last-child
+      margin-bottom: 20px
+
+.timeline-dot
+      position: absolute
+      top: 0
+      left: 0
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      margin-left: 28px
+      background-color: $kencolor
+      opacity: 0.9
+
+@media only screen and (min-width: 1170px)
+  .timeline-dot
+    width: 24px
+    height: 24px
+    left: 50%
+    margin-left: -13px
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0)
+    -webkit-backface-visibility: hidden
+
+  .cssanimations .timeline-dot.is-hidden
+    visibility: hidden
+
+  .cssanimations .timeline-dot.bounce-in
+    visibility: visible
+    -webkit-animation: cd-bounce-1 0.6s
+    -moz-animation: cd-bounce-1 0.6s
+    animation: cd-bounce-1 0.6s
+
+.timeline-content
+  position: relative
+  margin-left: 60px
+  background-color: #f1f8f2
+  box-shadow: 0px 3px 5px #eaecee
+  border-radius: 0.25em
+  padding: 1em
+
+.timeline-content:after
+  content: ""
+  display: table
+  clear: both
+
+.timeline-content h2
+  color: black
+  font-size: 30px
+  letter-spacing: 0.5px
+  font-weight: 300
+
+.timeline-content p
+  color: #272727
+  letter-spacing: 0.5px
+  font-weight: 400
+
+.timeline-content p, .timeline-content .company
+  font-size: 20px
+  font-size: 0.8125rem
+
+.timeline-content ul
+  padding: 20px 0
+
+.timeline-content li
+  text-align: left
+  color: #272727
+  letter-spacing: 0.2px
+  font-size: 17px
+  line-height: 30px
+  font-weight: 300
+  padding-left: 20px
+
+.timeline-content .company
+  display: inline-block
+
+.timeline-content p
+  margin: 1em 0
+  line-height: 1.6
+
+
+.timeline-content .company
+  float: left
+  padding: .8em 0
+  font-size: 25px
+  color:#272727
+
+.timeline-content::before
+  content: ''
+  position: absolute
+  top: 16px
+  right: 100%
+  height: 0
+  width: 0
+  border: 7px solid transparent
+  border-right: 7px solid white
+
+@media only screen and (min-width: 768px)
+  .timeline-content h2
+    font-size: 20px
+    font-size: 1.25rem
+
+  .timeline-content p
+    font-size: 16px
+    font-size: 1rem
+
+  .timeline-content .read-more, .timeline-content .company
+    font-size: 14px
+    font-size: 0.875rem
+
+@media only screen and (min-width: 1170px)
+  .timeline-content
+    margin-left: 0px
+    right: 80px
+    padding: 1.6em
+    width: 45%
+
+  .timeline-content::before
+    top: 24px
+    left: 100%
+    border-color: transparent
+    border-left-color: #f1f8f2
+
+  .timeline-content .read-more
+    float: left
+
+  .timeline-content .company
+    position: absolute
+    width: 100%
+    left: 130%
+    top: 6px
+    font-size: 16px
+    font-size: 1rem
+    //background-color: red
+
+  .timeline-block:nth-child(even) .timeline-content
+    float: right
+    left: 80px
+
+  .timeline-block:nth-child(even) .timeline-content::before
+    top: 24px
+    left: auto
+    right: 100%
+    border-color: transparent
+    border-right-color: #f1f8f2
+
+  .timeline-block:nth-child(even) .timeline-content
+    float: right
+
+  .timeline-block:nth-child(even) .timeline-content .company
+    left: auto
+    right: 130%
+    text-align: right
+
+  .cssanimations .timeline-content.is-hidden
+    visibility: hidden
+
+  .cssanimations .timeline-content.bounce-in
+    visibility: visible
+    -webkit-animation: cd-bounce-2 0.6s
+    -moz-animation: cd-bounce-2 0.6s
+    animation: cd-bounce-2 0.6s
+
+@media only screen and (min-width: 1170px)
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .timeline-block:nth-child(even) .timeline-content.bounce-in
+    -webkit-animation: cd-bounce-2-inverse 0.6s
+    -moz-animation: cd-bounce-2-inverse 0.6s
+    animation: cd-bounce-2-inverse 0.6s
+
+.education
+      background: url('/assets/img/webster-bg.jpg') no-repeat
+      background-size: cover
+
+.information
+      max-width: 500px
+      margin: 0px auto
+      //padding-right: 200px
+      padding-top: 50px
+      padding-bottom: 20px
+      padding-left: 35%
+      //background-color: pink
+
+      h2
+        text-align: left
+        Color: $kencolor
+        font:
+          size:30px
+          weight:200
+        text-transform: uppercase
+        letter-spacing: 5px
+        padding-bottom: 50px
+      li
+        text-align: left
+        color: white
+        font-size: 17px
+        line-height: 30px
+        font-weight: 300
+        letter-spacing: 0.8px
+      ul
+        padding: 30px 0px
+        //padding-left: 350px
+.information .bar
+      background-color: white
